@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   z-index: 2;
-  opacity: .9;
+  opacity: .6;
   -webkit-backface-visibility: hidden;
   background-color: #52d3aa;
   /* IE9, iOS 3.2+ */
@@ -424,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px dashed white;
 }
 #fh5co-home .text-inner h1 {
-  font-size: 50px;
+  font-size: 10vw;
   color: white;
   margin: 0 0 20px 0;
 }
@@ -432,10 +432,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 28px;
   line-height: 38px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
   margin: 0;
 }
-
 .slant {
   position: absolute;
   transform: rotate(-1.7deg);
