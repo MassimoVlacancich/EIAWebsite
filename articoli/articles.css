@@ -1,0 +1,252 @@
+.full-article {
+    /* 3D card appearance */
+
+    -webkit-box-shadow: 0px 8px 16px -6px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 8px 16px -6px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 8px 16px -6px rgba(0, 0, 0, 0.7);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background: #f5f5f5;
+    /* End 3D card block */
+
+    border-left: 6px solid #ccc;
+    padding: 15px 15px 0px 15px;
+    text-align: justify;
+    font-family: "Raleway", sans-serif;
+}
+@media all and (min-width: 650px) {
+    .full-article {
+        padding: 15px 40px 0px 40px;
+        margin: 0 auto;
+        max-width: 850px;
+    }
+}
+/* Title */
+
+header h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-weight: normal;
+    font-size: 2.7em;
+    font-size: calc(3vw + 3vh);
+    color: #74777C;
+    text-align: left;
+}
+@media all and (min-width: 640px) {
+    header h2 {
+        font-size: 46px;
+    }
+}
+/* End Title */
+/* Start Quote */
+
+blockquote.heading {
+    border-left: 0px;
+    margin: 0em 10px;
+    padding: 0.25em 10px 0.25em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-style: italic;
+    font-size: 2em;
+    font-size: calc(2vw + 2vh);
+    line-height: 1em;
+    text-align: left;
+}
+@media all and (min-width: 640px) {
+    blockquote.heading {
+        font-size: 25px;
+    }
+}
+blockquote.heading:before {
+    font-family: Raleway-Light;
+    content: open-quote;
+    font-size: 2.2em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote.heading:after {
+    font-family: Raleway-Light;
+    content: close-quote;
+    font-size: 2.2em;
+    line-height: 0.1em;
+    margin-left: 0.125em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
+/* End Quote */
+/* Start Sector section */
+
+#circle {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    vertical-align: middle;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: #16A72F;
+    float: left;
+    overflow: hidden;
+}
+.sector {
+    height: 20px;
+    width: 100%;
+    padding-bottom: 5px;
+}
+#sector-name {
+    margin-left: 20px;
+    height: 12px;
+    line-height: 12px;
+    vertical-align: middle;
+    font-style: italic;
+    color: #74777C;
+}
+/* End Sector section */
+/* Start stat bar and interactions section */
+
+#stat_bar:before,
+#stat_bar:after,
+#interaction::before,
+#interaction::after {
+    margin: -23px;
+    content: "";
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(204, 204, 204, 0.71) 50%, rgba(0, 0, 0, 0) 100%);
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.interactions {
+    font-size: 0.9em;
+    font-size: calc(12px + 0.6vw);
+    border-right: 1px solid;
+    border-color: rgba(204, 204, 204, 0.51);
+    text-align: center;
+}
+p.number-interactions {
+    font-size: 1.5em;
+    margin: 5px;
+}
+p.author-info {
+    font-size: 0.9em;
+    font-size: calc(10px + 0.5vw);
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+p.bar {
+    margin-bottom: 0px;
+}
+#profile-picture {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+}
+.row {
+    display: flex;
+    /* equal height of the children */
+}
+.col {
+    flex: 1;
+    /* additionally, equal width */
+
+    text-align: center;
+    padding: 0em;
+}
+.col-border {
+    border-right: 2px solid #EEEEEE;
+}
+/* End stat bar section */
+/* Start main article content section */
+
+section p {
+    /* These are technically the same, but use both */
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+}
+#content_article {
+    padding: 0px 40px 0px 40px;
+}
+/* End main article section */
+/* Rules for button styling */
+
+.material-icons {
+    padding: 0 20px;
+    border: none;
+    background: none;
+    text-decoration: none;
+}
+.material-icons.md-24 {
+    font-size: 24px;
+    vertical-align: middle;
+}
+.material-icons.md-36 {
+    font-size: 36px;
+}
+.material-icons.md-48 {
+    font-size: 48px;
+}
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+.material-icons.md-dark.md-inactive:hover {
+    color: rgba(82, 166, 199, 0.7);
+}
+.material-icons.md-dark.md-inactive.md-green {
+    color: rgb(0, 127, 127);
+}
+.material-icons.md-dark.md-inactive:active {
+    color: rgb(0, 127, 127);
+}
+div.btn-divider {
+    border-right: 2px solid #EEEEEE;
+}
+/* Button Bounce In effect*/
+
+.hvr-bounce-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+/* End Button Section */
+/* Comment styling */
+
+.form-group {
+    margin-bottom: 25;
+}

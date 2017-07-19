@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Luminary</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="css/style.css">
+	<!-- End demo purposes only -->
+
+	<!-- GOOGLE script to obtain analytics for luminary.it -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-91092109-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+	<style>
+	/* For demo purpose only */
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: block;
+		margin-bottom: 5px!important;
+		float: left;
+		width: 100%;
+	}
+	#colour-variations li a {
+		width: 100%;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+	}
+	#colour-variations li a:hover {
+	  	opacity: .9;
+	}
+	#colour-variations li a > span {
+		width: 33.33%;
+		height: 20px;
+		float: left;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		         <a class="navbar-brand" href="index.html">Luminary</a> 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#" data-nav-section="work"><span>Visione</span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><span>Testimoni</span></a></li>
+		            <li><a href="#" data-nav-section="services"><span>Piattaforma</span></a></li>
+		            <li><a href="#" data-nav-section="about"><span>Team</span></a></li>
+		            <li><a href="#" data-nav-section="contact"><span>Contatti</span></a></li>
+		            <li><a href="#" data-nav-section="general"><span>Pitchbook</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/statue.jpg);" data-stellar-background-ratio="0.5">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<div style="padding-bottom: 10px">
+								<img src="./images/LuminaryLogo.png" height="120" width="120">
+							</div>
+
+							<h1 class="to-animate">Luminary</h1>
+							<h2 class="to-animate">Per trasformare il mondo della politica. Insieme.</h2>
+
+							<div style="padding-top: 10px" >
+								<a href="home_english.html"><img src="images/english.png">  translate</a>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div style="text-align: center; margin: auto; padding-top: 40px">
+						<form id="gform" method="POST" class="pure-form pure-form-stacked"
+						  action="https://script.google.com/macros/s/AKfycbyo8SEmvlkrgvDUO58g27HTcStz8xM2_tLAYeSw7aADRzv8lKtm/exec">
+						    <!-- change the form action to your script url -->
+
+							<div class="col-md-6 to-animate col-md-offset-3">
+								<h3>Registrati alla newsletter per ricevere info sul nostro progresso!</h3>
+
+								<div class="form-group ">
+									<label for="email" class="sr-only">Email: </label>
+							      	<input id="email" name="email" class="form-control" type="email" value=""
+							      	required placeholder="latuaemail@email.com"/>
+							      	<span id="email-invalid" style="visibility:hidden">
+							        deve essere un indrizzo valido</span>
+								</div>
+								
+								<button class="btn btn-primary btn-lg">
+							      <i ></i>&nbsp;Invia</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="slant"></div>
+	</section>
+
+	<section id="fh5co-intro" data-section="general">
+		<div class="container">
+			<div class="row row-bottom-padded-lg">
+				<div class="fh5co-block to-animate" style="background-image: url(images/learn.jpg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-book-open"></i>
+						<h2>Scorpi</h2>
+						<p>Attraverso materiale che curiamo personalmente, sarai sempre al passo con gli avvenimenti politici più rilevanti per te.</p>
+						<p><a href="articoli.php" class="btn btn-primary">Articoli (beta)</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/debate.jpg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-people"></i>
+						<h2>Discuti</h2>
+						<p>Fai conoscere la tua opinione sugli avvenimenti quotidiani agli altri membri di Luminary.<br><br/></p>
+						<p><a href="#" class="btn btn-primary">Inizia oggi</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/change.jpg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-globe"></i>
+						<h2>Cambia</h2>
+						<p>Stimola il cambiamento che vuoi vedere nella tua città, stato, e nel mondo. Dai l’esempio.<br><br/></p>
+						<p><a href="#" class="btn btn-primary">Login</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="row watch-video text-center to-animate">
+				<span>Guarda il nostro video promozionale</span>
+				<!-- add Luminary video here -->
+				<a href="#" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
+				<span style="padding-top: 80px">Leggi il nostro <a href="documents/Luminary_Description_it.pdf" >Pitchbook!</a></span>
+				<a href="documents/Luminary_Description_it.pdf"><img src="images/pdf.png" style=" width: 100px; height: auto;"></a>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-work" data-section="work">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">VISIONE</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Il mondo è in continuo cambiamento. Ognuno di noi si adatta quotidianamente alla trasformazione della nostra società.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-sm">
+
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/vision/events.jpg" class="fh5co-project-item image-popup to-animate">
+						<img src="images/vision/events.jpg" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Eventi</h2>
+						<span style="font-color: black"> Gli eventi politici del 2016 sono stati cruciali nel definire una nuova era in cui la democrazia viene costantemente messa alla prova. <br> <br> <br> </span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/vision/voices.jpg" class="fh5co-project-item image-popup to-animate">
+						<img src="images/vision/voices.jpg" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Voci</h2>
+						<span>È fondamentale che la voce di tutti venga ascoltata se vogliamo davvero fare una differenza. Attraverso Luminary, vogliamo trasformare questo ideale in una realtà. <br> <br> </span>
+						</div>
+					</a>
+				</div>
+
+				<div class="clearfix visible-sm-block"></div>
+
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/vision/community.jpg" class="fh5co-project-item image-popup to-animate">
+						<img src="images/vision/community.jpg" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Comunita'</h2>
+						<span>Vogliamo convogliare il potenziale della comunità in cui viviamo attraverso una piattaforma unita e protetta, dalla quale si possa innescare il cambiamento di cui il mondo ha bisogno. </span>
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 text-center to-animate">
+					<p>Luminary può unire le nostre voci. Sarà la piattaforma dove le nostre voci non faranno solo la differenza. Saranno la differenza.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-testimonials" data-section="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Testimoni</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Ecco cosa i nostri amici, tester e primi users pensano di Luminary.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>&ldquo;
+							Avere la possibilita' di esprimere le mie opinioni con altri membri senza esser distratta da video e selfie è qualcosa che ho sempre voluto.
+							Finalmente posso trovare supporto nelle mie idee, pubblicando campagne, è divertente, utile ed efficace&rdquo;</p>
+						</blockquote>
+						<div class="author to-animate">
+							<figure><img src="images/testimonials/silvia.jpg" alt="Person"></figure>
+							<p>
+							Silvia<span class="subtext"> Studentessa </span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>&ldquo;
+							Passavo molte ore con il telefono in mano guardando selfies e post,
+							spesso annoiandomi e perdendo un sacco di tempo.
+							Luminary mi permette di informarmi in modo facile e veloce, ottendendo e fornendo feedback in modo semplice, ed essendo sempre al passo con gli avvenimenti piu' recenti e ciò che gli altri utenti ne pensano.&rdquo;</p>
+						</blockquote>
+						<div class="author to-animate">
+							<figure><img src="images/testimonials/valentina.jpg" alt="Person"></figure>
+							<p>
+							Valentina<span class="subtext">Editore </span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>&ldquo;
+							Ho sempre sentito il bisogno di esprimere le mie opinioni politiche e dar vita a del reale cambiamento. Qui sono ispirato dalla comunità e imparo qualcosa di nuovo ogni giorno. &rdquo;</p>
+						</blockquote>
+						<div class="author to-animate">
+							<figure><img src="images/testimonials/jason.jpg" alt="Person"></figure>
+							<p>
+							Jason <span class="subtext">Analista</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
+
+
+	<section id="fh5co-services" data-section="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-left">
+					<h2 class=" left-border to-animate">La Piattaforma</h2>
+					<div class="row">
+						<div class="col-md-8 subtext to-animate">
+							<h3>Il nostro staff sta sviluppando la nuova piattaforma Luminary per poter discutere apertamente di qualsiasi argomento gratuitamente.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-wrench"></i>
+					<h3>Sviluppo</h3>
+					<p>Quasi un anno fa, un ristretto team di talentuosi sviluppatori è stato reclutato per iniziare lo sviluppo di Luminary. Tramite l'utilizzo di moderne procedure di web development, siamo stati in grado di sviluppare una piattaforma innovativa e semplice da utilizzare.</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-layers2"></i>
+					<h3>Features</h3>
+					<p>Sarà possibile interagire con Luminary in diverse maniere. Dal leggere articoli all’iniziare campagne, dallo sfogliare un dizionario politico al fare dei quiz, portare attenzione alle cause che ti interessano non è mai stato così facile.</p>
+				</div>
+
+				<div class="clearfix visible-sm-block"></div>
+
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-rocket"></i>
+					<h3>Beta Version</h3>
+					<p>
+					La versione beta della piattaforma sarà disponibile ai nuovi utenti (su richiesta) a partire dalla metà di Giugno 2017. Il lancio sarà annunciato
+					successivamente.</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-paper-clip"></i>
+					<h3>Contenuti</h3>
+					<p>
+					Nel frattempo puoi iniziare a leggere i contenuti sviluppati dai nostri editori nella sezione <a href="articoli.php" style="color: blue" >articoli (Beta)</a> e seguirci sui nostri profili social!
+					</p>
+				</div>
+				
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12 section-heading text-left">
+					<h2 class=" left-border to-animate">Accedi alla Piattaforma</h2>
+					<div class="row">
+						<div class="col-md-8 subtext to-animate">
+							<h3>Clicca <a href="http://luminary.it/platform" style="color: blue"> qui </a> per accedere a Luminary</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	
+	<section id="fh5co-about" data-section="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">About US</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Il nostro team è composto da talentuosi studenti <br> provenienti da tutto il mondo: <br> da Los Angeles, a Torino, Milano, Parigi, Londra e York.<br/>Scopri di piu' riguardo al nostro team leggendo il <a href="documents/Luminary_Description_it.pdf" >pitchbook</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/team/massimo.jpg" alt="Image"></figure>
+						<h3>Massimo Vlacancich</h3>
+						<span class="fh5co-position">CEO</span>
+						<p>
+						Studente di Ingegneria Elettronica all' Università di York e sviluppatore di sistemi informatici a Morgan Stanley, Massimo ha avuto un ruolo rilevante nel trasformare Luminary da semplice idea a realtà, utilizzando techonologie e design innovativi, assieme al nostro team di sviluppatori.<br/></p>
+						<ul class="social social-circle">
+							<li><a href="https://www.linkedin.com/in/massimovlacancich/"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/massimo.tarasso"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://github.com/MassimoVlacancich"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/team/erik.png" alt="Image"></figure>
+						<h3>Erik Ferrarese</h3>
+						<span class="fh5co-position">COO</span>
+						<p>
+						Studente di Scienze Strategice all'Università di Torino e Management all'ESCP, Erik ha permesso a Luminary di crescere solida e forte, creando un vasto network di possibili utenti e persone interessate alla start up, anche
+						prendendosi cura della campagna marketing della piattaforma.</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.linkedin.com/in/erik-ferrarese-533898129/"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/erikferrarese"><i class="icon-facebook"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/team/alessandro.jpg" alt="Image"></figure>
+						<h3>Alessandro Paolucci</h3>
+						<span class="fh5co-position">Co-fondatore</span>
+						<p>
+						Studente di Business Management alla Bocconi ed Invester Banker a Bank Of America, <br> Alessandro è uno dei membri piu' preziosi nel nostro team.
+						La sua esperienza in Finanza e Management ci ha permesso di raggiunere la maggior parte dei nostri traguardi.</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.linkedin.com/in/alepaolucci/"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/alessandro.paolucci.95"><i class="icon-facebook"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
+		<div class="fh5co-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center to-animate">
+					<h2>Fatti Interessanti</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-people to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="22" data-speed="5000" data-refresh-interval="50">22</span>
+						<span class="fh5co-counter-label">Membri del Team</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-code to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="478636" data-speed="5000" data-refresh-interval="50">478636</span>
+						<span class="fh5co-counter-label">Righe di codice</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-cup to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="1302" data-speed="5000" data-refresh-interval="50">1302</span>
+						<span class="fh5co-counter-label">Tazze di caffè</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-clock to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="7841" data-speed="5000" data-refresh-interval="50">7841</span>
+						<span class="fh5co-counter-label">Ore di lavoro</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-contact" data-section="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">CONTATTACI</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>
+							Non esitare a contattarci, ogni domanda, suggerimento e aiuto sono ben accetti a Luminary</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-6 to-animate">
+					<h3>Contatti</h3>
+					<ul class="fh5co-contact-info">
+						<li class="fh5co-contact-address ">
+							<i class="icon-home"></i>
+							Lungo dora voghera 120/c<br>Torino | Italy
+						</li>
+						<li><i class="icon-phone"></i> Italia: +39 334 6062963</li>
+						<li><i class="icon-phone"></i> UK:    +44 07490 391378</li>
+						<li><i class="icon-envelope"></i>admin@luminary.it</li>
+						<li><i class="icon-globe"></i> <a href="http://www.luminary.it" target="_blank">luminary.it</a></li>
+					</ul>
+				</div>
+
+
+				<form id="gform" method="POST" class="pure-form pure-form-stacked"
+				  action="https://script.google.com/macros/s/AKfycbyo8SEmvlkrgvDUO58g27HTcStz8xM2_tLAYeSw7aADRzv8lKtm/exec">
+				    <!-- change the form action to your script url -->
+
+					<div class="col-md-6 to-animate">
+						<h3>Form</h3>
+
+						<div class="form-group ">
+							<label for="name" class="sr-only" >Nome: </label>
+					      	<input id="name" class="form-control" name="name" placeholder="Name" type="text"/>
+						</div>
+
+						<div class="form-group ">
+							<label for="email" class="sr-only">Email: </label>
+					      	<input id="email" name="email" class="form-control" type="email" value=""
+					      	required placeholder="latuaemail@email.com"/>
+					      	<span id="email-invalid" style="visibility:hidden">
+					        Must be a valid email address</span>
+						</div>
+						
+						<div class="form-group ">
+							<label for="message" class="sr-only">Messaggio: </label>
+					      	<textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Contenuto: non dimenticare di inserire dati rilveanti come numero di telefono o indirizzo"  ></textarea>
+						</div>
+
+						<button class="btn btn-primary btn-lg">
+					      <i ></i>&nbsp;Invia</button>
+
+						</div>
+
+					</div>
+				</form>
+
+			</div>
+		</div>
+		
+		<!--<div id="map" class="to-animate"></div> -->
+	</section>
+	
+	
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>Luminary | Tutti Diritti Riservati. <br>Creato da Luminary Technologies</p>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://twitter.com/luminaryitalia"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/profile.php?id=100016751741819"><i class="icon-facebook"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Counter -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+
+	
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
