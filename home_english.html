@@ -60,7 +60,6 @@
 
 	<style>
 		/* For demo purpose only */
-
 		/* For Demo Purposes Only ( You can delete this anytime :-) */
 		#colour-variations {
 			padding: 10px;
@@ -130,7 +129,6 @@
 			zoom: 1;
 			*display: inline;
 		}
-
 		.option-toggle {
 			position: absolute;
 			right: 0;
@@ -181,13 +179,34 @@
                 x.style.display = 'none';
             }
         }
-        function changeArrow(divName) {
-            if (document.getElementById(divName).src == "images/arrowUp.png") {
-                document.getElementById(divName).src = "images/arrowDown.png";
+        var newsrc = "arrowUp.png";
+        function changeImage(divName) {
+
+            if ( newsrc == "arrowUp.png" ) {
+                document.images[divName].src = "images/arrowUp.png";
+                document.images[divName].alt = "Up";
+                newsrc  = "arrowDown.png";
             }
             else {
-                document.getElementById(divName).src = "images/arrowUp.png";
+                document.images[divName].src = "images/arrowDown.png";
+                document.images[divName].alt = "Earth";
+                newsrc  = "arrowUp.png";
             }
+        }
+        var images = [], x = -1;
+        images[0] = "images/paris.jpg";
+        images[1] = "images/question.jpg";
+        images[2] = "images/rally.jpg";
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("landingImg").src = images[x];
+        }
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("landingImg").src = images[x];
+        }
+        function startTimer() {
+            setInterval(displayNextImage, 3000);
         }
 	</script>
 
@@ -205,13 +224,12 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
-					<li><a href="#" data-nav-section="services"><span>Platform</span></a></li>
 					<li><a href="#" data-nav-section="work"><span>Vision</span></a></li>
+					<li><a href="#" data-nav-section="services"><span>Platform</span></a></li>
 					<li><a href="#" data-nav-section="testimonials"><span>Testimonials</span></a></li>
 					<li><a href="#" data-nav-section="about"><span>Team</span></a></li>
 					<li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-
-					<li><span><p><a class="btn btn-primary" style="margin-top: -3.5vh; float: right; position: relative; color: #FFFFFF;" href="http://luminary.it/platform">Sign Up</p></span></a></li>
+					<li><span><p><a href="http://luminary.it/platform" class="btn btn-primary" style="margin-top: -3.8vh; float: right; position: relative; color: #FFFFFF;">Login</p></span></a></li>
 				</ul>
 			</div>
 		</nav>
@@ -228,49 +246,20 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 
-						<!--<div style="padding-bottom: 30px">
-							<img src="./images/LuminaryLogo.png" height="120" width="120">
-						</div>-->
 
-						<!--<div class="typewriter">
-							<h2>Transforming the new world of politics. Together.</h2>
-						</div>-->
+						<h1 class="to-animate" style="text-shadow: 1px 1px 2px black">Luminary</h1>
 
-						<h2 class="to-animate" style="padding-left: -50px; padding-bottom: 5%; font-size: 50px; line-height: 180%">Discuss crucial, relevant issues both local and abroad </h2>
-						<br/><br/>
-						<h2 class="to-animate" style="font-size: 30px; line-height: 150%; font-color: #FFFFFF;">Engage with a user-driven community<br/>Join the conversation, become involved</h2>
-						<!--<h2 class="to-animate" style="">Engage with a user-driven community.</h2>
-						<h2 class="to-animate" style="margin-left: 10%;">Inspire. Be the change you want to see.</h2>-->
+						<div style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">
+							<h2 class="to-animate">Transforming the new world of politics. Together.</h2>
 
-						<div style="padding-top: 10px;" >
-							<!--<a href="home.html"><img src="images/italian.png" style="font-size: 7px;"> traduci</a> -->
+							<h2 class="to-animate" style="padding-left: -50px;">Discuss crucial, relevant issues both local and abroad. Engage with a user-driven community<br/>Join the conversation, become involved</h2>
+
+							<div style="padding-top: 10px;" >
+								<!--<a href="home.html"><img src="images/italian.png" style="font-size: 7px;"> traduci</a> -->
+							</div>
 						</div>
 					</div>
 				</div>
-
-				<!-- MOVE THIS TO OTHER SECTION, THIS IS THE NEWSLETTER SIGN UP
-                <div style="text-align: center; margin: auto; padding-top: 40px">
-                    <form id="gform" method="POST" class="pure-form pure-form-stacked"
-                      action="https://script.google.com/macros/s/AKfycbyo8SEmvlkrgvDUO58g27HTcStz8xM2_tLAYeSw7aADRzv8lKtm/exec">
-
-                        <div class="col-md-6 to-animate col-md-offset-3">
-                            <h3>Join our newsletter to follow our progress!</h3>
-                            <div class="form-group ">
-                                <label for="email" class="sr-only">Email: </label>
-                                  <input id="email" name="email" class="form-control" type="email" value=""
-                                  required placeholder="youremail@email.com"/>
-                                  <span id="email-invalid" style="visibility:hidden">
-                                Must be a valid email address</span>
-                            </div>
-
-                            <button class="btn btn-primary btn-lg">
-                              <i ></i>&nbsp;Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                -->
 
 			</div>
 		</div>
@@ -297,8 +286,8 @@
 				<div class="fh5co-text">
 					<i class="fh5co-intro-icon icon-people"></i>
 					<h2>Debate</h2>
-					<p>Discover an opportunity to discuss and engage with the Luminary community on current affairs and politics. <br/></p>
-					<p><a href="http://luminary.it/platform" class="btn btn-primary">Login</a></p>
+					<p>Discover an opportunity to discuss and engage with the Luminary community on current affairs and politics. Register below to get started. <br/></p>
+					<p><a href="http://luminary.it/platform" class="btn btn-primary">Register</a></p>
 				</div>
 			</div>
 			<div class="fh5co-block to-animate" style="background-image: url(images/background/classwar.jpg);">
@@ -313,31 +302,52 @@
 			</div>
 		</div>
 
-		<!--<div class="row watch-video text-center to-animate">
+		<div class="row watch-video text-center to-animate">
 			<div class="col-md-12 section-heading text-center">
-				<h2 class="to-animate" data-section="general" style="margin-left: 3%;">Get Involved</h2>
-				<p style="margin-bottom: -10px; float: center; margin-left: 3%;">Click on the logo below to join our community.</p>
+				<h2 class="to-animate" data-section="general" style="margin-left: 3%;">Join Luminary today</h2>
 			</div>
 
-			<div>
-				<a href="http://www.luminary.it/platform"><img src="images/addUser.png" class="shadowfilter" style=" margin-left: 2%; padding-left: 3%; padding-top: 3%; width: 200px;"></a>
-			</div>
+			<form id="gform" method="POST" class="pure-form pure-form-stacked"
+				  action="https://script.google.com/macros/s/AKfycbyo8SEmvlkrgvDUO58g27HTcStz8xM2_tLAYeSw7aADRzv8lKtm/exec">
+				<!-- change the form action to your script url -->
+
+				<div class="col-md-6 to-animate col-md-offset-3" style="width: 40vw">
+					<h3>Sign up to our newsletter to follow our progress!</h3>
+					<br/>
+					<div class="form-group ">
+						<label for="email" class="sr-only">Email: </label>
+						<input id="email" name="email" class="form-control" type="email" value=""
+							   required placeholder="Email"/>
+						<span id="email-invalid" style="visibility:hidden">
+						        Must be a valid email address</span>
+					</div>
+
+					<button class="btn btn-primary btn-lg">
+						<i ></i>&nbsp;Send</button>
+				</div>
 		</div>
-		-->
-
-		<!-- MOVE THIS TO OTHER SECTION, THIS IS THE VIDEO AND PITCHBOOK
-        <div class="row watch-video text-center to-animate">
-            <span>Watch our promotional video</span>
-
-            <a href="#" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
-            <span style="padding-top: 80px">Read our <a href="documents/Luminary_Description_it.pdf" >Pitchbook!</a></span>
-            <a href="documents/Luminary_Description_it.pdf"><img src="images/pdf.png" style=" width: 100px; height: auto;"></a>
+		</form>
+	</div>
+	<!--<div class="row watch-video text-center to-animate">
+        <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate" data-section="general" style="margin-left: 3%;">Get Involved</h2>
+            <p style="margin-bottom: -10px; float: center; margin-left: 3%;">Click on the logo below to join our community.</p>
         </div>
-        -->
-
+        <div>
+            <a href="http://www.luminary.it/platform"><img src="images/addUser.png" class="shadowfilter" style=" margin-left: 2%; padding-left: 3%; padding-top: 3%; width: 200px;"></a>
+        </div>
+    </div>
+    -->
+	<!-- MOVE THIS TO OTHER SECTION, THIS IS THE VIDEO AND PITCHBOOK
+    <div class="row watch-video text-center to-animate">
+        <span>Watch our promotional video</span>
+        <a href="#" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
+        <span style="padding-top: 80px">Read our <a href="documents/Luminary_Description_it.pdf" >Pitchbook!</a></span>
+        <a href="documents/Luminary_Description_it.pdf"><img src="images/pdf.png" style=" width: 100px; height: auto;"></a>
+    </div>
+    -->
 	</div>
 </section>
-
 <section id="fh5co-work" data-section="work">
 	<div class="container">
 		<div class="row">
@@ -351,7 +361,6 @@
 			</div>
 		</div>
 		<div class="row row-bottom-padded-sm">
-
 			<div class="col-md-4 col-sm-6 col-xxs-12">
 				<a href="images/vision/events.jpg" class="fh5co-project-item image-popup to-animate">
 					<img src="images/vision/events.jpg" alt="Image" class="img-responsive">
@@ -361,7 +370,6 @@
 					</div>
 				</a>
 			</div>
-
 			<div class="col-md-4 col-sm-6 col-xxs-12">
 				<a href="images/vision/voices.jpg" class="fh5co-project-item image-popup to-animate">
 					<img src="images/vision/voices.jpg" alt="Image" class="img-responsive">
@@ -371,9 +379,7 @@
 					</div>
 				</a>
 			</div>
-
 			<div class="clearfix visible-sm-block"></div>
-
 			<div class="col-md-4 col-sm-6 col-xxs-12">
 				<a href="images/vision/community.jpg" class="fh5co-project-item image-popup to-animate">
 					<img src="images/vision/community.jpg" alt="Image" class="img-responsive">
@@ -383,17 +389,21 @@
 					</div>
 				</a>
 			</div>
-
 		</div>
-
 		<div class="row">
 			<div class="col-md-12 text-center to-animate">
 				<p>We envision Luminary to be such place. It will be the platform where our voices will not just make a difference. They will be the difference.</p>
+				<h3 style="color: #fff">Want to know more?</h3>
+			</div>
+			<div class="row watch-video text-center to-animate">
+	        <span style="padding-top: 5px; padding-left: 30px;">Read our <a href="documents/Luminary_Description_it.pdf" >Pitchbook!</a>
+	        </span>
+				<!--<a href="documents/Luminary_Description_it.pdf"><img src="images/pdf.png" style=" width: 100px; height: auto;"></a> -->
 			</div>
 		</div>
+
 	</div>
 </section>
-
 <section id="fh5co-services" data-section="services">
 	<div class="container">
 		<div class="row">
@@ -417,9 +427,7 @@
 				<h3>Features</h3>
 				<p>It will be possible to take advantage of the Luminary platform in several ways. From reading articles to starting campaigns, from browsing a political dictionary to taking quizzes, raising awareness about the causes that you care about the most has never been so easy.</p>
 			</div>
-
 			<div class="clearfix visible-sm-block"></div>
-
 			<div class="col-md-6 col-sm-6 fh5co-service to-animate">
 				<i class="icon to-animate-2 icon-rocket"></i>
 				<h3>Beta Version</h3>
@@ -430,11 +438,9 @@
 				<h3>Content</h3>
 				<p>In the meanwhile, you can start reading the original content curated by our growing community and follow us on our social pages!</p>
 			</div>
-
 		</div>
 	</div>
 </section>
-
 <section id="fh5co-testimonials" data-section="testimonials">
 	<div class="container">
 		<div class="row">
@@ -445,7 +451,7 @@
 						<h3>This is what our friends, testers and first users think about Lumimary</h3>
 					</div>
 				</div>
-				<a onclick="hideDiv('testimonialsDiv'); changeArrow('testimonialsArrow')" ><img id="testimonialsArrow" src="images/arrowDown.png" style="width:50px; height: auto"></a>
+				<a onclick="hideDiv('testimonialsDiv'); changeImage('testimonialsArrow')" ><img id="testimonialsArrow" src="images/arrowDown.png" style="width:50px; height: auto"></a>
 			</div>
 		</div>
 		<div class="row" id="testimonialsDiv" style="display: none;">
@@ -475,7 +481,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="col-md-4">
 				<div class="box-testimony">
 					<blockquote class="to-animate-2">
@@ -492,10 +497,6 @@
 		</div>
 	</div>
 </section>
-
-
-
-
 <section id="fh5co-about" data-section="about">
 	<div class="container">
 		<div class="row">
@@ -508,20 +509,19 @@
 							Discover more about our team members from our Pitchbook</h3>
 					</div>
 				</div>
-				<a onclick="hideDiv('teamDiv'); changeArrow('teamArrow')" ><img id="teamArrow" src="images/arrowDown.png" style="width:50px; height: auto;"></a>
+				<a onclick="hideDiv('teamDiv'); changeImage('teamArrow')" ><img id="teamArrow" src="images/arrowDown.png" style="width:50px; height: auto;"></a>
 			</div>
 		</div>
-		<div class="row" id="teamDiv" style="display: none;">
+		<div class="row" id="teamDiv" style="display: none; padding-top: 50px;">
 			<div class="col-md-4">
 				<div class="fh5co-person text-center to-animate">
-					<figure><img src="images/team/massimo.jpg" alt="Image"></figure>
-					<h3>Massimo Vlacancich</h3>
-					<span class="fh5co-position">CEO</span>
-					<p>Electronics Engineering student at York and Software Developer at Morgan Stanley, Massimo has played a relevant role in turning Luminary from idea to reality by using innovative technologies and design, together with our developers team.<br> <br/></p>
+					<figure><img src="images/team/colby.png" alt="Image"></figure>
+					<h3>Colby Clayton</h3>
+					<span class="fh5co-position">CTO</span>
+					<p>A Cyber Security professional and Risk Consultant at Deloitte Australia, Colby's diverse and unique skillset enables him to leverage a deep technical prowess and contextualise this understanding to suit business requirements. <br> <br/></p>
 					<ul class="social social-circle">
-						<li><a href="https://www.linkedin.com/in/massimovlacancich/"><i class="icon-linkedin"></i></a></li>
-						<li><a href="https://www.facebook.com/massimo.tarasso"><i class="icon-facebook"></i></a></li>
-						<li><a href="https://github.com/MassimoVlacancich"><i class="icon-github"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/colby-clayton-509919133/"><i class="icon-linkedin"></i></a></li>
+						<li><a href="https://www.facebook.com/colby.clayton.75"><i class="icon-facebook"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -529,7 +529,7 @@
 				<div class="fh5co-person text-center to-animate">
 					<figure><img src="images/team/erik.png" alt="Image"></figure>
 					<h3>Erik Ferrarese</h3>
-					<span class="fh5co-position">COO</span>
+					<span class="fh5co-position">CEO</span>
 					<p>Strategic Sciences student in Turin and Master in Management student at ESCP Europe, Erik has allowed Luminary to grow strong by creating a newtwork of possible users and interested parties during the development process, and preparing our marketing campaign.</p>
 					<ul class="social social-circle">
 						<li><a href="https://www.linkedin.com/in/erik-ferrarese-533898129/"><i class="icon-linkedin"></i></a></li>
@@ -539,20 +539,58 @@
 			</div>
 			<div class="col-md-4">
 				<div class="fh5co-person text-center to-animate">
-					<figure><img src="images/team/alessandro.jpg" alt="Image"></figure>
-					<h3>Alessandro Paolucci</h3>
-					<span class="fh5co-position">Co-founder</span>
-					<p>Business Student at Bocconi University and Investement Banker at Bank of America, <br>Alessandro is one of the most valuable members of our team. His experience in Finance and managements helped us to achieve most of our goals.</p>
+					<figure><img src="images/team/aisha.jpg" alt="Image"></figure>
+					<h3>Aisha Arif</h3>
+					<span class="fh5co-position">Marketing</span>
+					<p>Aisha is a psychology and public policy student from Berkeley, California. Her experience with psychological research and previous start-up companies provides the Luminary team with invaluable insight into what our customers want. </p>
 					<ul class="social social-circle">
-						<li><a href="https://www.linkedin.com/in/alepaolucci/"><i class="icon-linkedin"></i></a></li>
-						<li><a href="https://www.facebook.com/alessandro.paolucci.95"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		<br/>
+			<div class="col-md-4" style="padding-top: 30px;">
+				<div class="fh5co-person text-center to-animate">
+					<figure><img src="images/team/elias.png" alt="Image"></figure>
+					<h3>Elias Sabee</h3>
+					<span class="fh5co-position">CBO</span>
+					<p>Student of Management & Entrepreneurship at Bentley University. Elias' strategic vision and creative skills have been fundamental characteristics in the reach of both marketing and short-term goal achievements of Luminary. </p>
+					<ul class="social social-circle">
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4" style="padding-top: 30px;">
+				<div class="fh5co-person text-center to-animate">
+					<figure><img src="images/team/massimo.jpg" alt="Image"></figure>
+					<h3>Massimo Vlacancich</h3>
+					<span class="fh5co-position">Advisor</span>
+					<p>Electronics Engineering student at York and Software Developer at Morgan Stanley, Massimo has played a relevant role in turning Luminary from idea to reality by using innovative technologies and design, together with our developers team.<br> <br/></p>
+					<ul class="social social-circle">
+						<li><a href="https://www.linkedin.com/in/massimovlacancich/"><i class="icon-linkedin"></i></a></li>
+						<li><a href="https://www.facebook.com/massimo.tarasso"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://github.com/MassimoVlacancich"><i class="icon-github"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4" style="padding-top: 30px;">
+				<div class="fh5co-person text-center to-animate">
+					<figure><img src="images/team/alon.jpg" alt="Image"></figure>
+					<h3>Alon Goldenberg</h3>
+					<span class="fh5co-position">Strategist and Finance</span>
+					<p>A final year student in Economics and Politics, Alon’s experience range a number of sectors including Marketing and Finance. Having a keen interest in people and strategy puts Luminary in a position to focus on users, excel as a business and grow as a community.</p>
+					<ul class="social social-circle">
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
 
+</section>
 <section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
 	<div class="fh5co-overlay"></div>
 	<div class="container">
@@ -593,7 +631,6 @@
 		</div>
 	</div>
 </section>
-
 <section id="fh5co-contact" data-section="contact">
 	<div class="container">
 		<div class="row">
@@ -620,55 +657,41 @@
 					<li><i class="icon-globe"></i> <a href="http://www.luminary.it" target="_blank">luminary.it</a></li>
 				</ul>
 			</div>
-
-
 			<form id="gform" method="POST" class="pure-form pure-form-stacked"
 				  action="https://script.google.com/macros/s/AKfycbyo8SEmvlkrgvDUO58g27HTcStz8xM2_tLAYeSw7aADRzv8lKtm/exec">
 				<!-- change the form action to your script url -->
-
 				<div class="col-md-6 to-animate">
 					<h3>Contact Form</h3>
-
 					<div class="form-group ">
 						<label for="name" class="sr-only" >Name: </label>
 						<input id="name" class="form-control" name="name" placeholder="Name" type="text"/>
 					</div>
-
 					<div class="form-group ">
 						<label for="email" class="sr-only">Email</label>
 						<input id="email" name="email" class="form-control" type="email" value=""
-							   required placeholder="youremail@email.com"/>
+							   required placeholder="Email"/>
 						<span id="email-invalid" style="visibility:hidden">
 					        Must be a valid email address</span>
 					</div>
-
 					<div class="form-group ">
 						<label for="message" class="sr-only">Message: </label>
-						<textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Content: Please don't forget to insert any relevant information such as phone number or address"  ></textarea>
+						<textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Any feedback you could provide on the platform, design or problems can be placed here."  ></textarea>
 					</div>
-
 					<button class="btn btn-primary btn-lg">
 						<i ></i>&nbsp;Send</button>
-
 				</div>
-
 		</div>
 		</form>
-
 	</div>
 	</div>
-
 	<!--<div id="map" class="to-animate"></div> -->
 </section>
-
-
 <footer id="footer" role="contentinfo">
 	<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
 	<div class="container">
 		<div class="">
 			<div class="col-md-12 text-center">
 				<p>Luminary | All Rights Reserved. <br>Created by Luminary Technologies</p>
-
 			</div>
 		</div>
 		<div class="row">
@@ -681,9 +704,6 @@
 		</div>
 	</div>
 </footer>
-
-
-
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
 <!-- jQuery Easing -->
@@ -702,11 +722,7 @@
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 <script src="js/google_map.js"></script>
-
-
-
 <!-- Main JS (Do not remove) -->
 <script src="js/main.js"></script>
-
 </body>
 </html>
